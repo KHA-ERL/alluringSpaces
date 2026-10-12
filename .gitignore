@@ -13,6 +13,9 @@ build/
 # Reference-site analysis artifacts
 output/
 
+# Local setup notes
+SANITY_SETUP.md
+
 # Environment files
 .env*
 !.env.example
