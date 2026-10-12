@@ -1,0 +1,88 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&family=Space+Mono:wght@400;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply m-0 bg-paper font-sans text-ink;
+  }
+
+  img,
+  video {
+    @apply block max-w-full;
+  }
+
+  a {
+    @apply text-inherit no-underline;
+  }
+
+  input,
+  select,
+  textarea {
+    @apply w-full rounded-sm border border-[#d8cbb8] bg-paper px-3.5 py-3 font-sans text-ink outline-none transition focus:border-clay focus:ring-2 focus:ring-clay/20;
+  }
+
+  textarea {
+    resize: vertical;
+  }
+}
+
+@layer components {
+  .section {
+    @apply px-4 py-20 sm:px-6 lg:px-10 lg:py-[120px];
+  }
+
+  .button {
+    @apply inline-flex min-h-[42px] items-center justify-center rounded-sm border border-current px-4 font-mono text-[0.72rem] font-bold uppercase underline-offset-4 transition duration-300 hover:-translate-y-0.5 hover:underline;
+  }
+
+  .eyebrow {
+    @apply mb-4 font-mono text-[0.72rem] font-bold uppercase tracking-normal text-clay;
+  }
+
+  .card {
+    @apply overflow-hidden rounded-none border border-black/10 bg-paper transition duration-300 hover:-translate-y-1 hover:border-clay/60;
+  }
+
+  .meta {
+    @apply font-mono text-[0.72rem] font-bold uppercase text-[#6e4630];
+  }
+
+  .page-shell {
+    @apply min-h-screen bg-paper pt-24 text-ink;
+  }
+
+  .editorial-rule {
+    @apply border-t border-black/15;
+  }
+
+  .image-panel {
+    @apply overflow-hidden rounded-none bg-[#efe9cd];
+  }
+
+  .soft-reveal {
+    animation: soft-reveal 780ms cubic-bezier(0.22, 1, 0.36, 1) both;
+  }
+}
+
+@keyframes soft-reveal {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

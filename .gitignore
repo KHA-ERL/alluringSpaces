@@ -1,0 +1,44 @@
+# Dependencies
+node_modules/
+
+# Next.js
+.next/
+out/
+.vercel/
+
+# Production and tool build output
+dist/
+build/
+
+# Reference-site analysis artifacts
+output/
+
+# Environment files
+.env*
+!.env.example
+
+package-lock.json
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# OS/editor files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.pem
+
+# Sanity local/runtime artifacts
+.sanity/
+*.tar.gz
+
+# Coverage and caches
+coverage/
+.nyc_output/
+.eslintcache
+.turbo/
